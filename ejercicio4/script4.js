@@ -8,8 +8,8 @@ do {
     user = prompt("Usuario");
     password = prompt("Password");
     if (user == "Estudiante" && password == "batman17") {
-        validation = true;
-    } else { contador --;
+             validation = true;
+        } else { contador --;
         alert("Usuario o password incorrecto.");
        }
        if (contador > 1 && validation == false) {
@@ -19,7 +19,7 @@ do {
        }
      }
     while (validation == false && contador > 0);
-    if (validation == true) {
+    if (validation) {
         alert("Usuario y password correctos.");} else {
             alert("Has agotado tus tres intentos");
         }
