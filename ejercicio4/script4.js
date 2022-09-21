@@ -7,20 +7,23 @@ alert("Hola");
 do {
     user = prompt("Usuario");
     password = prompt("Password");
-    if (user == "Estudiante" && password == "batman17") {
-             validation = true;
-        } else { contador --;
+    // los booleanos pueden almacenar operaciones
+    // validation = user == userOK && password == passwordOK; 
+    if (user == userOK && password == passwordOK) {
+        validation = true;
+    } else {
+        contador--;
         alert("Usuario o password incorrecto.");
-       }
-       if (contador > 1 && validation == false) {
+    }
+    if (contador > 1 && validation == false) {
         alert("Piensa mejor, todavía tienes " + contador + " intentos.");
-       } else if (contador == 1 && validation == false) {
+    } else if (contador == 1 && validation == false) {
         alert("Piensa mejor, todavía tienes " + contador + " intento.");
-       }
-     }
-    while (validation == false && contador > 0);
-    if (validation) {
-        alert("Usuario y password correctos.");} else {
-            alert("Has agotado tus tres intentos");
-        }
-    
+    }
+} while (!validation && contador > 0);
+if (validation) {
+    alert("Usuario y password correctos.");
+} else {
+    alert("Has agotado tus tres intentos");
+}
+

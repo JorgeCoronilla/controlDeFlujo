@@ -1,7 +1,7 @@
 var frase = prompt("Escribe una frase");
-var letra = prompt("Escribe una letra");
-var contador = 0;
-for( var i=0; i <= frase.length; i++) {
+var letra = prompt("Escribe una letra"); //Validación de datos
+let contador = 0;
+for (let i=0; i < frase.length; i++) {
     if (letra == frase.charAt(i)){
         contador++;
     }
